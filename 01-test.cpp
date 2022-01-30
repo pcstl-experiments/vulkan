@@ -7,11 +7,12 @@
 #include <glm/mat4x4.hpp>
 
 #include <iostream>
+#include <cstdlib>
 
 int main() {
   glfwInit();
   glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
-  GLFWwindow *window = glfwCreateWindow(800, 600, "Vulkan", nullptr, nullptr);
+  GLFWwindow* window = glfwCreateWindow(800, 600, "Vulkan", nullptr, nullptr);
 
   uint32_t extensionCount = 0;
   vkEnumerateInstanceExtensionProperties(nullptr, &extensionCount, nullptr);
@@ -29,5 +30,5 @@ int main() {
   glfwDestroyWindow(window);
   glfwTerminate();
 
-  return 0;
+  return EXIT_SUCCESS;
 }
